@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Placita — SACRO</title>
+<meta name="description" content="La Placita, Dorado. Archivo de SACRO.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marfil:#F6F2EA;
+  --tinta:#15130F;
+  --bronce:#A5854D;
+  --piedra:#8E8779;
+  --hair:rgba(21,19,15,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--marfil);
+  color:var(--tinta);
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  line-height:1.8;
+  letter-spacing:.02em;
+  overflow-x:hidden;
+}
+.wrap{max-width:640px;margin:0 auto;padding:0 28px}
+/* idioma */
+.lang{position:fixed;top:20px;right:22px;z-index:60;display:flex;gap:2px}
+.lang button{
+  background:none;border:none;color:var(--piedra);cursor:pointer;
+  font-family:'Jost',sans-serif;font-size:11px;letter-spacing:.22em;
+  padding:6px 8px;transition:color .3s;
+}
+.lang button.active{color:var(--bronce)}
+.lang button:focus-visible{outline:1px solid var(--bronce);outline-offset:2px}
+a:focus-visible{outline:1px solid var(--bronce);outline-offset:3px}
+/* encabezado */
+.top{padding-top:56px}
+.home{
+  font-family:'Cormorant Garamond',serif;font-weight:300;font-size:24px;
+  letter-spacing:.4em;color:var(--tinta);text-decoration:none;
+  display:inline-block;padding:4px 0;
+}
+.eyebrow{
+  color:var(--bronce);font-size:11px;letter-spacing:.4em;
+  text-transform:uppercase;font-weight:400;
+}
+/* ficha */
+.head{padding:96px 0 0}
+.head .eyebrow{margin-bottom:18px}
+h1{
+  font-family:'Cormorant Garamond',serif;font-weight:300;
+  font-size:clamp(40px,8vw,64px);line-height:1.1;
+}
+.desc{
+  margin-top:40px;font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(20px,3.2vw,24px);line-height:1.65;
+}
+.appears{padding:72px 0 0}
+.appears .eyebrow{margin-bottom:24px}
+.appears ul{list-style:none}
+.appears li{
+  font-family:'Cormorant Garamond',serif;font-size:clamp(19px,3vw,22px);
+  padding:16px 0;border-bottom:1px solid var(--hair);
+}
+.appears li:first-child{border-top:1px solid var(--hair)}
+.appears .date{color:var(--piedra);font-size:.85em}
+.photos{padding:88px 0 0;display:flex;flex-direction:column;gap:40px}
+.photos img{display:block;width:100%;height:auto;background:rgba(21,19,15,.06)}
+.back{padding:88px 0 0;text-align:center}
+.back a{
+  color:var(--piedra);text-decoration:none;font-size:12px;letter-spacing:.32em;
+  text-transform:uppercase;display:inline-block;padding:10px 0;transition:color .3s;
+}
+.back a:hover{color:var(--bronce)}
+footer{
+  padding:90px 0 50px;color:var(--piedra);
+  font-size:10px;letter-spacing:.3em;text-transform:uppercase;
+  text-align:center;
+}
+</style>
+</head>
+<body>
+
+<nav class="lang" aria-label="Idioma">
+  <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+  <button id="btn-en" onclick="setLang('en')">EN</button>
+</nav>
+
+<header class="wrap top">
+  <a class="home" href="../">SACRO</a>
+</header>
+
+<main class="wrap">
+
+  <section class="head">
+    <p class="eyebrow" data-es="Archivo" data-en="Archive">Archivo</p>
+    <h1>La Placita</h1>
+    <p class="desc" data-es="Placita en Dorado, al lado de Pizza Boy. Paredes verde lima, arcos de ladrillo, escalones pintados." data-en="A small plaza in Dorado, next to Pizza Boy. Lime-green walls, brick arches, painted steps.">Placita en Dorado, al lado de Pizza Boy. Paredes verde lima, arcos de ladrillo, escalones pintados.</p>
+  </section>
+
+  <section class="appears">
+    <p class="eyebrow" data-es="Aparece en" data-en="Appears in">Aparece en</p>
+    <ul>
+      <li>Yo y Mi Bocina <span class="date">(13 · X · MMXXVI)</span></li>
+    </ul>
+  </section>
+
+  <div class="photos">
+    <img src="../img/placita-1.jpg" width="1080" height="1350" loading="lazy" decoding="async" alt="Tres hombres sentados de noche en los escalones verde lima de La Placita, con botellas en la mano, frente a una pared amarilla con ventanas de marco verde.">
+    <img src="../img/placita-2.jpg" width="1080" height="1350" loading="lazy" decoding="async" alt="Un hombre de camisa blanca mira hacia un lado frente a una pared verde lima con arcos de ladrillo pintados; detrás, un perro pequeño con suéter.">
+    <img src="../img/placita-3.jpg" width="1080" height="1350" loading="lazy" decoding="async" alt="Un hombre de camisa blanca sentado frente a la pared verde lima, con un arco de ladrillo detrás y la moldura blanca del techo arriba.">
+    <img src="../img/placita-4.jpg" width="1080" height="1350" loading="lazy" decoding="async" alt="Un hombre sentado en un escalón pintado se cubre la cara con la mano, bajo una luz cálida y tenue; detrás, el suelo de adoquines y dos arcos de ladrillo.">
+    <img src="../img/placita-5.jpg" width="1080" height="1350" loading="lazy" decoding="async" alt="Un hombre de camisa blanca habla por teléfono, sentado sobre los adoquines frente a dos arcos de ladrillo en la pared verde lima.">
+  </div>
+
+  <p class="back"><a href="../" data-es="← Volver al inicio" data-en="← Back to home">← Volver al inicio</a></p>
+
+  <footer>
+    <span>© MMXXVI Sacro Media</span>
+  </footer>
+
+</main>
+
+<script>
+function setLang(l){
+  document.documentElement.lang = l;
+  document.getElementById('btn-es').classList.toggle('active', l==='es');
+  document.getElementById('btn-en').classList.toggle('active', l==='en');
+  document.querySelectorAll('[data-es]').forEach(el=>{ el.textContent = el.dataset[l]; });
+  try{ localStorage.setItem('sacro-lang', l); }catch(e){}
+}
+try{ if(localStorage.getItem('sacro-lang')==='en') setLang('en'); }catch(e){}
+</script>
+</body>
+</html>

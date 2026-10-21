@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sacro Media//La Placita Parte II//ES
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:la-placita-parte-2-20261030@sacromedia
+DTSTAMP:20261020T120000Z
+DTSTART:20261031T010000Z
+DTEND:20261031T040000Z
+SUMMARY:SACRO — La Placita\, Parte II
+LOCATION:La Placita\, al lado de Pizza Boy\, Dorado\, Puerto Rico
+DESCRIPTION:Ven disfrazado. Trae tu silla de playa.
+END:VEVENT
+END:VCALENDAR

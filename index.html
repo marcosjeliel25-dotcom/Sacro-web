@@ -113,6 +113,33 @@ section{padding:120px 0}
   width:38px;height:1px;background:var(--bronce);
   margin:0 auto 40px;opacity:.8;
 }
+/* invitación — misma banda de tinta */
+.invite{padding:120px 24px}
+.invite .mono{font-family:'Jost',sans-serif;font-style:normal;margin-top:0}
+.invite h2{font-size:clamp(32px,6.4vw,52px);letter-spacing:.12em;margin-right:-.12em}
+.invite .when{
+  margin-top:34px;font-family:'Jost',sans-serif;font-style:normal;
+  font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--marfil);
+}
+.invite .where,.invite .note{margin-top:14px}
+.invite .flyer{display:block;width:100%;max-width:420px;height:auto;margin:56px auto 0}
+.invite-links{
+  margin-top:40px;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 28px;
+}
+.invite-links a{
+  color:var(--bronce);text-decoration:none;font-size:11px;letter-spacing:.32em;
+  text-transform:uppercase;padding:10px 0;transition:color .3s;
+}
+.invite-links a:hover{color:var(--marfil)}
+.invite-links a:focus-visible{outline:1px solid var(--bronce);outline-offset:3px}
+.invite .sign{margin-top:48px;opacity:.7}
+/* en vivo — mismo estilo que el catálogo */
+#en-vivo{padding-top:0}
+.rel.live .yr{white-space:nowrap}
+.rel .sub{
+  display:block;margin-top:6px;font-family:'Jost',sans-serif;
+  font-size:10px;color:var(--piedra);letter-spacing:.26em;text-transform:uppercase;
+}
 /* escucha */
 .links{display:flex;flex-direction:column}
 .links a{
@@ -131,6 +158,7 @@ footer{
   font-size:10px;letter-spacing:.3em;text-transform:uppercase;
   text-align:center;
 }
+@media (max-width:340px){ h1{font-size:50px} }
 /* reveal */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity 1.2s ease,transform 1.2s ease}
 .reveal.in{opacity:1;transform:none}
@@ -163,7 +191,27 @@ footer{
     <section class="manifesto reveal" style="text-align:center">
       <p><em data-es="Que la música hable." data-en="Let the music speak.">Que la música hable.</em></p>
     </section>
+  </div>
 
+  <section class="tease invite" id="invitacion" aria-labelledby="invite-title">
+    <p class="mono" data-es="Invitación" data-en="Invitation">Invitación</p>
+    <h2 id="invite-title">La Placita&nbsp;— Parte&nbsp;II</h2>
+    <p class="when" data-es="Viernes 30 de octubre · 9:00 PM" data-en="Friday, October 30 · 9:00 PM">Viernes 30 de octubre · 9:00 PM</p>
+    <p class="where">La Placita, al lado de Pizza Boy · Dorado</p>
+    <p class="note" data-es="Ven disfrazado. Trae tu silla de playa." data-en="Come in costume. Bring a beach chair.">Ven disfrazado. Trae tu silla de playa.</p>
+    <img class="flyer" src="img/flyer-parte2.jpg" alt="Flyer dibujado a mano para La Placita, Parte II" width="1080" height="1350" loading="lazy" decoding="async">
+    <div class="invite-links">
+      <a href="parte2.ics" data-es="Añadir al calendario" data-en="Add to calendar">Añadir al calendario</a>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Pizza+Boy+Dorado+Puerto+Rico" target="_blank" rel="noopener" data-es="Cómo llegar" data-en="Directions">Cómo llegar</a>
+    </div>
+    <p class="sign">de parte de.. SACRO ..con mucho amor</p>
+  </section>
+  <script>
+  // retires itself once Oct 31, 2026 ends in Puerto Rico (UTC-4); without JS it stays visible
+  if (Date.now() >= Date.parse('2026-11-01T00:00:00-04:00')) document.getElementById('invitacion').hidden = true;
+  </script>
+
+  <div class="wrap">
     <section class="reveal" id="musica">
       <p class="eyebrow" data-es="Música" data-en="Music">Música</p>
       <a class="rel" href="https://open.spotify.com/album/5MYhjuZQXcnhy6bGirXPv4" target="_blank" rel="noopener">
@@ -182,6 +230,14 @@ footer{
         <span class="kind" data-es="Sencillo" data-en="Single">Sencillo</span>
       </a>
     </section>
+
+    <section class="reveal" id="en-vivo">
+      <p class="eyebrow" data-es="En vivo" data-en="Live">En vivo</p>
+      <a class="rel live" href="archivo/la-placita.html">
+        <span class="yr">13 · X · MMXXVI</span>
+        <span class="tt">Yo y Mi Bocina<span class="sub" data-es="La Placita, Dorado — con Rosel Lozada" data-en="La Placita, Dorado — with Rosel Lozada">La Placita, Dorado — con Rosel Lozada</span></span>
+      </a>
+    </section>
   </div>
 
   <section class="tease reveal">
@@ -197,6 +253,7 @@ footer{
         <a href="https://open.spotify.com/artist/3gy7JBS79nEvQ2jDORrBCx" target="_blank" rel="noopener">Spotify <span class="arrow">→</span></a>
         <a href="https://music.apple.com/us/artist/sacro/1701623595" target="_blank" rel="noopener">Apple Music <span class="arrow">→</span></a>
         <a href="https://youtube.com/@laesquinadesacro" target="_blank" rel="noopener">YouTube <span class="arrow">→</span></a>
+        <a href="https://www.tiktok.com/@sacrotesss" target="_blank" rel="noopener">TikTok <span class="arrow">→</span></a>
         <a href="https://www.instagram.com/sacropr" target="_blank" rel="noopener">Instagram <span class="arrow">→</span></a>
       </div>
     </section>
@@ -222,7 +279,9 @@ function setLang(l){
   document.getElementById('btn-es').classList.toggle('active', l==='es');
   document.getElementById('btn-en').classList.toggle('active', l==='en');
   document.querySelectorAll('[data-es]').forEach(el=>{ el.textContent = el.dataset[l]; });
+  try{ localStorage.setItem('sacro-lang', l); }catch(e){}
 }
+try{ if(localStorage.getItem('sacro-lang')==='en') setLang('en'); }catch(e){}
 const io = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
 },{threshold:.15});
