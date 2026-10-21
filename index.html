@@ -133,12 +133,12 @@ section{padding:120px 0}
 .invite-links a:hover{color:var(--marfil)}
 .invite-links a:focus-visible{outline:1px solid var(--bronce);outline-offset:3px}
 .invite .sign{margin-top:48px;opacity:.7}
-/* en vivo — mismo estilo que el catálogo */
-#en-vivo{padding-top:0}
-.rel.live .yr{white-space:nowrap}
-.rel .sub{
-  display:block;margin-top:6px;font-family:'Jost',sans-serif;
-  font-size:10px;color:var(--piedra);letter-spacing:.26em;text-transform:uppercase;
+/* música — dos grupos */
+#musica .eyebrow{margin-bottom:30px}
+.group + .group{margin-top:72px}
+.group-label{
+  font-size:10px;color:var(--piedra);letter-spacing:.26em;
+  text-transform:uppercase;margin-bottom:18px;font-weight:400;
 }
 /* escucha */
 .links{display:flex;flex-direction:column}
@@ -214,39 +214,25 @@ footer{
   <div class="wrap">
     <section class="reveal" id="musica">
       <p class="eyebrow" data-es="Música" data-en="Music">Música</p>
-      <a class="rel" href="https://open.spotify.com/album/5MYhjuZQXcnhy6bGirXPv4" target="_blank" rel="noopener">
-        <span class="yr">2024</span>
-        <span class="tt">La Luz al Final del Túnel</span>
-        <span class="kind">EP</span>
-      </a>
-      <a class="rel" href="https://open.spotify.com/album/1MsVSJ2ZDr5pJPvaYMrdL1" target="_blank" rel="noopener">
-        <span class="yr">2024</span>
-        <span class="tt">Desbalance</span>
-        <span class="kind" data-es="Sencillo" data-en="Single">Sencillo</span>
-      </a>
-      <a class="rel" href="https://open.spotify.com/track/6gN2MorjH6rJcZfu3hsGPo" target="_blank" rel="noopener">
-        <span class="yr">2024</span>
-        <span class="tt">Me Pesa</span>
-        <span class="kind" data-es="Sencillo" data-en="Single">Sencillo</span>
-      </a>
+      <div class="group">
+        <p class="group-label" data-es="Lo más escuchado" data-en="Most played">Lo más escuchado</p>
+        <a class="rel" href="https://open.spotify.com/album/5MYhjuZQXcnhy6bGirXPv4" target="_blank" rel="noopener">
+          <span class="yr">2024</span>
+          <span class="tt">La Luz al Final del Túnel</span>
+          <span class="kind">EP</span>
+        </a>
+        <a class="rel" href="https://open.spotify.com/album/1MsVSJ2ZDr5pJPvaYMrdL1" target="_blank" rel="noopener">
+          <span class="yr">2024</span>
+          <span class="tt">Desbalance</span>
+          <span class="kind" data-es="Sencillo" data-en="Single">Sencillo</span>
+        </a>
+        <a class="rel" href="https://open.spotify.com/track/6gN2MorjH6rJcZfu3hsGPo" target="_blank" rel="noopener">
+          <span class="yr">2024</span>
+          <span class="tt">Me Pesa</span>
+          <span class="kind" data-es="Sencillo" data-en="Single">Sencillo</span>
+        </a>
+      </div>
     </section>
-
-    <section class="reveal" id="en-vivo">
-      <p class="eyebrow" data-es="En vivo" data-en="Live">En vivo</p>
-      <a class="rel live" href="archivo/la-placita.html">
-        <span class="yr">13 · X · MMXXVI</span>
-        <span class="tt">Yo y Mi Bocina<span class="sub" data-es="La Placita, Dorado — con Rosel Lozada" data-en="La Placita, Dorado — with Rosel Lozada">La Placita, Dorado — con Rosel Lozada</span></span>
-      </a>
-    </section>
-  </div>
-
-  <section class="tease reveal">
-    <div class="rule" aria-hidden="true"></div>
-    <h2 data-es="OCTUBRE 2026" data-en="OCTOBER 2026">OCTUBRE 2026</h2>
-    <p data-es="La historia continúa." data-en="The story continues.">La historia continúa.</p>
-  </section>
-
-  <div class="wrap">
     <section class="reveal">
       <p class="eyebrow" data-es="Escucha" data-en="Listen">Escucha</p>
       <div class="links">
